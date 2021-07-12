@@ -5,7 +5,7 @@ from random import randint
 # main window
 root = Tk()
 root.title("Rock Scissor Paper")
-root.configure(background="#9b59b6")
+root.configure(background="#696e48")
 
 # picture
 rock_img = ImageTk.PhotoImage(Image.open("rock-user.png"))
@@ -16,37 +16,34 @@ paper_img_comp = ImageTk.PhotoImage(Image.open("paper.png"))
 scissor_img_comp = ImageTk.PhotoImage(Image.open("scissors.png"))
 
 # insert picture
-user_label = Label(root, image=scissor_img, bg="#9b59b6")
-comp_label = Label(root, image=scissor_img_comp, bg="#9b59b6")
+user_label = Label(root, image=scissor_img, bg="#696e48")
+comp_label = Label(root, image=scissor_img_comp, bg="#696e48")
 comp_label.grid(row=1, column=0)
 user_label.grid(row=1, column=4)
 
-
 # scores
-playerScore = Label(root, text=0, font=100, bg="#9b59b6", fg="white")
-computerScore = Label(root, text=0, font=100, bg="#9b59b6", fg="white")
+playerScore = Label(root, text=0, font=100, bg="#696e48", fg="white")
+computerScore = Label(root, text=0, font=100, bg="#696e48", fg="white")
 computerScore.grid(row=1, column=1)
 playerScore.grid(row=1, column=3)
 
 # indicators
-user_indicator = Label(root, font=50, text="USER", bg="#9b59b6", fg="white")
+user_indicator = Label(root, font=50, text="USER", bg="#696e48", fg="white")
 comp_indicator = Label(root, font=50, text="COMPUTER",
-                       bg="#9b59b6", fg="white")
+                       bg="#696e48", fg="white")
 user_indicator.grid(row=0, column=3)
 comp_indicator.grid(row=0, column=1)
 
 # messages
-msg = Label(root, font=50, bg="#9b59b6", fg="white")
+msg = Label(root, font=50, bg="#696e48", fg="white")
 msg.grid(row=3, column=2)
 
 # update message
-
 
 def updateMessage(x):
     msg['text'] = x
 
 # update user score
-
 
 def updateUserScore():
     score = int(playerScore["text"])
@@ -55,14 +52,12 @@ def updateUserScore():
 
 # update computer score
 
-
 def updateCompScore():
     score = int(computerScore["text"])
     score += 1
     computerScore["text"] = str(score)
 
 # check winner
-
 
 def checkWin(player, computer):
     if player == computer:
@@ -110,7 +105,7 @@ def updateChoice(x):
         comp_label.configure(image=scissor_img_comp)
 
 
-# for user
+    # for user
     if x == "rock":
         user_label.configure(image=rock_img)
     elif x == "paper":
