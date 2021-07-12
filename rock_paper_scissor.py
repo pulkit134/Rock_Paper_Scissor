@@ -4,7 +4,7 @@ from random import randint
 
 # main window
 root = Tk()
-root.title("Rock Scissor Paper")
+root.title("Rock Paper Scissor")
 root.configure(background="#696e48")
 
 # picture
