@@ -87,7 +87,6 @@ def checkWin(player, computer):
     else:
         pass
 
-
 # update choices
 
 choices = ["rock", "paper", "scissor"]
@@ -104,8 +103,7 @@ def updateChoice(x):
     else:
         comp_label.configure(image=scissor_img_comp)
 
-
-    # for user
+  # for user
     if x == "rock":
         user_label.configure(image=rock_img)
     elif x == "paper":
@@ -114,7 +112,6 @@ def updateChoice(x):
         user_label.configure(image=scissor_img)
 
     checkWin(x, compChoice)
-
 
 # buttons
 rock = Button(root, width=20, height=2, text="ROCK",
