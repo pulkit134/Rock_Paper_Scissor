@@ -90,8 +90,6 @@ def checkWin(player, computer):
 # update choices
 
 choices = ["rock", "paper", "scissor"]
-
-
 def updateChoice(x):
 
     # for computer
